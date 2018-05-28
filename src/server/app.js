@@ -23,14 +23,9 @@ app.use(cors());
 
 // Archivos estaticos
 app.use(express.static(path.join(__dirname + '/..', '/client/dist/client')));
-//app.use(express.static(path.join(__dirname, 'public')));
 
 // Asocio las rutas a la APP
 app.use('/api', api);
-
-/*app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
-});*/
 
 // Exporto la aplicacion
 module.exports = app;
